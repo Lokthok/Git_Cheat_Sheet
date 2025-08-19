@@ -1,38 +1,85 @@
-command,subcommand,description
-git,config,list and set configuration options for your Git environment (user info or aliases or etc.)
-git,config --global,set config values globally for the current user
-git,config --local,set config values locally for the current repository only
-git,init,initialize a new Git repository
-git,clone,create a copy of an existing Git repository
-git,add,stage changes to be committed
-git,commit,save staged changes to the repository with a message
-git,status,show the status of working directory and staging area
-git,log,show commit history of the repository
-git,diff,show changes between commits or commit and working tree  etc.
-git,branch,list or create or delete branches
-git,branch -d,delete a specified branch
-git,checkout,switch branches or restore working tree files
-git,checkout -b,create and switch to a new branch
-git,merge,combine multiple branches into one
-git,rebase,reapply commits on top of another base tip to maintain a linear history
-git,reset,undo commits by resetting current HEAD to a specified state
-git,restore,restore files in the working directory from the index or a commit
-git,revert,create a new commit that undoes the changes from a previous commit
-git,remote,manage set of tracked repositories (add or remove or list)
-git,push,upload local changes to a remote repository
-git,pull,fetch and integrate changes from a remote repository
-git,fetch,download objects and refs from a remote repository without merging
-git,stash,temporarily save changes that are not ready to be committed
-git,tag,create or list tags to mark specific points in history
-git,cherry-pick,apply the changes introduced by existing commits
-git,bisect,use binary search to find the commit that introduced a bug
-git,reflog,show history of HEAD or branch tips for recovery
-git,show,show various types of objects and their metadata
-git,clean,remove untracked files from working directory
-git,diff-files,compare working directory and index files only
-git,diff-index,compare index and a tree or commit
-git,config --get,get a specific configuration value
-git,config --unset,remove a configuration option
-git,config --list,list all current configuration settings
-git,config --edit,open the config file in an editor for manual editing
-git,config --add,add values to a multi-valued config variable
+Command,Scope,Section,Key,Value Example,Scope Description,Section Description,Key Description
+git config,--system,user,name,"Max Mustermann","System-wide configuration","User related settings","User name for commits"
+git config,--system,user,email,"max@example.com","System-wide configuration","User related settings","Email for commits"
+git config,--global,user,name,"Max Mustermann","Per-user configuration","User related settings","User name for commits"
+git config,--global,user,email,"max@example.com","Per-user configuration","User related settings","Email for commits"
+git config,--local,core,editor,"vim","Repository specific configuration","Core git settings","Default text editor"
+git config,--local,core,autocrlf,true,"Repository specific configuration","Core git settings","Handle line endings"
+git config,--worktree,core,autocrlf,true,"Worktree specific configuration","Core git settings","Handle line endings"
+git config,-c,alias,st,"status","Temporary command-line config","Alias commands","Alias for git status"
+git config,--global,core,autocrlf,true,"Per-user configuration","Core git settings","Enable automatic line ending conversion"
+git config,--global,pull,rebase,false,"Per-user configuration","Pull commands settings","Use merge or rebase when pulling"
+git config,--global,color,ui,true,"Per-user configuration","Color output settings","Enable or disable color in Git output"
+git config,--local,commit,template,".gitmessage.txt","Repository specific configuration","Commit settings","Template file for commit messages"
+git config,--global,core,fscache,true,"Per-user configuration","Core git settings","Enable filesystem caching on Windows"
+git config,--global,user.signingkey,"ABC1234","Per-user configuration","User related settings","GPG key for signing commits"
+git config,--global,alias,co,"checkout","Per-user configuration","Alias commands","Alias for git checkout"
+git config,--global,http,sslVerify,true,"Per-user configuration","HTTP settings","Enable SSL verification for HTTP requests"
+git config,--global,merge,tool,"vimdiff","Per-user configuration","Merge settings","Default merge tool"
+git config,--local,remote,origin.url,"https://github.com/user/repo.git","Repository specific configuration","Remote repository settings","URL of the origin remote"
+git config,--local,remote,origin.fetch,"+refs/heads/*:refs/remotes/origin/*","Repository specific configuration","Remote repository settings","Fetch refspec for origin remote"
+git config,--global,init.defaultBranch,"main","Per-user configuration","Init command settings","Default branch name for new repos"
+git config,--global,core.safecrlf,true,"Per-user configuration","Core git settings","Enable warnings for unsafe line ending conversions"
+git config,--global,credential.helper,"cache","Per-user configuration","Credential settings","Helper program for storing credentials"
+Command,Options,Value Example,Scope Description,Section Description,Key Description,Description,Example
+git config,--system,user.name,"Max Mustermann","System-wide configuration","User related settings","User name for commits","Set the user name for commits","git config --system user.name ""Max Mustermann"""
+git config,--system,user.email,"max@example.com","System-wide configuration","User related settings","Email for commits","Set the user email for commits","git config --system user.email ""max@example.com"""
+git config,--global,user.name,"Max Mustermann","Per-user configuration","User related settings","User name for commits","Set the user name for commits","git config --global user.name ""Max Mustermann"""
+git config,--global,user.email,"max@example.com","Per-user configuration","User related settings","Email for commits","Set the user email for commits","git config --global user.email ""max@example.com"""
+git config,--local,core.editor,"vim","Repository specific configuration","Core git settings","Default text editor","Set default text editor","git config --local core.editor ""vim"""
+git config,--local,core.autocrlf,true,"Repository specific configuration","Core git settings","Handle line endings","Handle line endings conversion","git config --local core.autocrlf true"
+git config,--worktree,core.autocrlf,true,"Worktree specific configuration","Core git settings","Handle line endings","Handle line endings conversion for worktree","git config --worktree core.autocrlf true"
+git config,-c,alias.st,"status","Temporary command-line config","Alias commands","Alias for git status","Temporary alias for git status","git config -c alias.st status"
+git config,--global,core.autocrlf,true,"Per-user configuration","Core git settings","Enable automatic line ending conversion","Enable automatic line ending conversion","git config --global core.autocrlf true"
+git config,--global,pull.rebase,false,"Per-user configuration","Pull commands settings","Use merge or rebase when pulling","Set pull to merge or rebase","git config --global pull.rebase false"
+git config,--global,color.ui,true,"Per-user configuration","Color output settings","Enable or disable color in Git output","Enable color output","git config --global color.ui true"
+git config,--local,commit.template,".gitmessage.txt","Repository specific configuration","Commit settings","Template file for commit messages","Set commit message template","git config --local commit.template .gitmessage.txt"
+git config,--global,core.fscache,true,"Per-user configuration","Core git settings","Enable filesystem caching on Windows","Enable filesystem caching","git config --global core.fscache true"
+git config,--global,user.signingkey,"ABC1234","Per-user configuration","User related settings","GPG key for signing commits","Set GPG key for signing commits","git config --global user.signingkey ABC1234"
+git config,--global,alias.co,"checkout","Per-user configuration","Alias commands","Alias for git checkout","Alias for git checkout","git config --global alias.co checkout"
+git config,--global,http.sslVerify,true,"Per-user configuration","HTTP settings","Enable SSL verification for HTTP requests","Enable SSL verification","git config --global http.sslVerify true"
+git config,--global,merge.tool,"vimdiff","Per-user configuration","Merge settings","Default merge tool","Set default merge tool","git config --global merge.tool vimdiff"
+git config,--local,remote.origin.url,"https://github.com/user/repo.git","Repository specific configuration","Remote repository settings","URL of the origin remote","Set URL of remote origin","git config --local remote.origin.url https://github.com/user/repo.git"
+git config,--local,remote.origin.fetch,"+refs/heads/*:refs/remotes/origin/*","Repository specific configuration","Remote repository settings","Fetch refspec for origin remote","Set fetch refspec","git config --local remote.origin.fetch +refs/heads/*:refs/remotes/origin/*"
+git config,--global,init.defaultBranch,"main","Per-user configuration","Init command settings","Default branch name for new repos","Set default branch name for new repos","git config --global init.defaultBranch main"
+git config,--global,core.safecrlf,true,"Per-user configuration","Core git settings","Enable warnings for unsafe line ending conversions","Enable safe CRLF warnings","git config --global core.safecrlf true"
+git config,--global,credential.helper,"cache","Per-user configuration","Credential settings","Helper program for storing credentials","Set credential helper","git config --global credential.helper cache"
+git init,, -,-,-,-,"Initialize a new Git repository","Initialize a new Git repo","git init myproject"
+git clone,,<url>,-,-,-,"Clone a repository from URL","Clone repository from remote URL","git clone https://github.com/user/repo.git"
+git clone,--branch <branch>,<url>,-,-,-,"Clone specific branch from repo","Clone specific branch","git clone --branch develop https://github.com/user/repo.git"
+git add,.,-,-,-,-,"Add files to staging","Add all files to index","git add ."
+git status,, -,-,-,-,"Show modified and staged files","Show repository status","git status"
+git commit,-m "message",-,-,-,-,"Commit staged changes with message","Create a commit with message","git commit -m \"Add new feature\""
+git commit,--amend,-,-,-,-,"Modify last commit","Amend previous commit","git commit --amend"
+git branch,-d,-,-,-,-,"Delete branch safely","Delete a local branch safely","git branch -d feature"
+git branch,-D,-,-,-,-,"Force delete branch","Force delete a local branch","git branch -D feature"
+git branch,--all,-,-,-,-,"List all branches local and remote","List all branches","git branch --all"
+git checkout,-b <branch>,-,-,-,-,"Create and switch to a new branch","Create new branch and switch","git checkout -b feature"
+git checkout,<branch>,-,-,-,-,"Switch to existing branch","Switch branches","git checkout main"
+git merge,, -,-,-,-,"Merge branch into current branch","Combine changes from branch","git merge feature"
+git merge,--no-ff,-,-,-,-,"Create merge commit even if fast-forward possible","Create merge commit","git merge --no-ff feature"
+git merge,--abort,-,-,-,-,"Abort current merge","Cancel merge process","git merge --abort"
+git push,, -,-,-,-,"Push commits to remote","Push changes to remote","git push origin main"
+git push,--force,-,-,-,-,"Force push commits","Force push to remote repo","git push --force origin main"
+git push,--set-upstream,-,-,-,-,"Set branch upstream when pushing","Set upstream branch","git push --set-upstream origin feature"
+git pull,, -,-,-,-,"Fetch and merge from remote","Pull changes from remote","git pull origin main"
+git pull,--rebase,-,-,-,-,"Fetch and rebase instead of merge","Rebase while pulling","git pull --rebase origin main"
+git stash,, -,-,-,-,"Save changes temporarily","Stash local changes","git stash"
+git stash,apply,-,-,-,-,"Apply stashed changes","Reapply stash","git stash apply"
+git remote,-v,-,-,-,-,"Show remote URLs","List remotes","git remote -v"
+git remote,add <name> <url>,-,-,-,-,"Add remote repository","Add new remote repo","git remote add origin https://github.com/user/repo.git"
+git remote,remove <name>,-,-,-,-,"Remove remote repository","Remove remote repo","git remote remove origin"
+git tag,-a <name> -m "message",-,-,-,-,"Create annotated tag","Create a tag with message","git tag -a v1.0 -m \"Release version 1.0\""
+git tag,, -,-,-,-,"List tags","Show all tags","git tag"
+git log,, -,-,-,-,"Show commit history","View commit log","git log"
+git log,--oneline,-,-,-,-,"Show one line per commit","Compact log view","git log --oneline"
+git reset,--soft <commit>,-,-,-,-,"Reset commits but keep changes staged","Soft reset","git reset --soft HEAD~1"
+git reset,--hard <commit>,-,-,-,-,"Reset commits and discard changes","Hard reset","git reset --hard HEAD~1"
+git revert <commit>,-,-,-,-,-,"Create commit that reverts changes of specified commit","Undo a commit","git revert abc123"
+git clean,-fd,-,-,-,-,"Remove untracked files and directories","Clean working directory","git clean -fd"
+git bisect,start,-,-,-,-,"Start bisect to find bug-inducing commit","Binary search to find bad commit","git bisect start"
+git bisect,good <commit>,-,-,-,-,"Mark commit as good during bisect","Mark good commit","git bisect good abc123"
+git bisect,bad <commit>,-,-,-,-,"Mark commit as bad during bisect","Mark bad commit","git bisect bad def456"
+git cherry-pick <commit>,-,-,-,-,-,"Apply changes from specific commit","Copy commit to current branch","git cherry-pick abc123"
+git fetch,, -,-,-,-,"Download objects and refs from remote","Fetch from remote","git fetch origin"
+git reflog,, -,-,-,-,"Show history of HEAD changes","View reference log","git reflog"
