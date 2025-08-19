@@ -8,7 +8,7 @@ git,add,stage changes to be committed
 git,commit,save staged changes to the repository with a message
 git,status,show the status of working directory and staging area
 git,log,show commit history of the repository
-git,diff,show changes between commits, commit and working tree, etc.
+git,diff,show changes between commits or commit and working tree  etc.
 git,branch,list, create or delete branches
 git,branch -d,delete a specified branch
 git,checkout,switch branches or restore working tree files
@@ -18,7 +18,7 @@ git,rebase,reapply commits on top of another base tip to maintain a linear histo
 git,reset,undo commits by resetting current HEAD to a specified state
 git,restore,restore files in the working directory from the index or a commit
 git,revert,create a new commit that undoes the changes from a previous commit
-git,remote,manage set of tracked repositories (add, remove, list)
+git,remote,manage set of tracked repositories (add or remove or list)
 git,push,upload local changes to a remote repository
 git,pull,fetch and integrate changes from a remote repository
 git,fetch,download objects and refs from a remote repository without merging
