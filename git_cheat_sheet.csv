@@ -21,7 +21,7 @@ git config,--local,remote,origin.fetch,"+refs/heads/*:refs/remotes/origin/*","Re
 git config,--global,init,defaultBranch,"main","Per-user configuration","Init command settings","Default branch name for new repos","Set default branch name for new repos","git config --global init.defaultBranch main"
 git config,--global,core,safecrlf,true,"Per-user configuration","Core git settings","Enable warnings for unsafe line ending conversions","Enable safe CRLF warnings in Git","git config --global core.safecrlf true"
 git config,--global,credential,helper,"cache","Per-user configuration","Credential settings","Helper program for storing credentials","Set helper program for storing credentials","git config --global credential.helper cache"
-git init,,,,,-,-,-,-,"Initialize a new Git repository","Initialize new Git repository","git init myproject"
+git init,,,,,-,-,-,-,"Initialize a new Git repository" and / or Initialize new Git repository and / or git init myproject
 git clone,,,,<url>,-,-,-,-,"Clone a repository from URL","Clone repository from remote URL","git clone https://github.com/user/repo.git"
 git clone,--branch <branch>,,<url>,-,-,-,-,"Clone specific branch from repository","Clone specific branch from a remote repo","git clone --branch develop https://github.com/user/repo.git"
 git add,,,,.,-,-,-,-,"Add files to staging area","Add all files to index","git add ."
