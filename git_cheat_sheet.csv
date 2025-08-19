@@ -1,5 +1,5 @@
 command,subcommand,description
-git,config,list and set configuration options for your Git environment (user info, aliases, etc.)
+git,config,list and set configuration options for your Git environment (user info or aliases or etc.)
 git,config --global,set config values globally for the current user
 git,config --local,set config values locally for the current repository only
 git,init,initialize a new Git repository
