@@ -33,30 +33,30 @@ git branch,-D,,,,,-,-,-,Force delete branch / Force delete local branch / git br
 git branch,--all,,,,,-,-,-,List all branches local and remote / List all branches including remote / git branch --all
 git checkout,-b <branch>,,,,,-,-,-,Create and switch to new branch / Create new branch and switch / git checkout -b feature
 git checkout,<branch>,,,,,-,-,-,Switch to existing branch / Switch branches / git checkout main
-git merge,,,,,-,-,-,-,Merge branch into current branch / Combine changes from branch into current / git merge feature"
-git merge,--no-ff,,,,,-,-,-,"Create merge commit even if fast-forward possible","Create merge commit even if fast-forward possible","git merge --no-ff feature"
-git merge,--abort,,,,,-,-,-,"Abort current merge","Cancel running merge process","git merge --abort"
-git push,,,,,-,-,-,-,"Push commits to remote","Send commits to remote repository","git push origin main"
-git push,--force,,,,,-,-,-,"Force push commits","Forcefully push commits to remote","git push --force origin main"
-git push,--set-upstream,,,,,-,-,-,"Set branch upstream when pushing","Set upstream branch tracking","git push --set-upstream origin feature"
-git pull,,,,,-,-,-,-,"Fetch and merge from remote","Fetch and merge remote changes","git pull origin main"
-git pull,--rebase,,,,,-,-,-,"Fetch and rebase instead of merge","Rebase local changes on top of incoming","git pull --rebase origin main"
-git stash,,,,,-,-,-,-,"Save changes temporarily","Temporarily stash changes","git stash"
-git stash,apply,,,,,-,-,-,"Apply stashed changes","Apply changes saved in stash","git stash apply"
-git remote,-v,,,,,-,-,-,"Show remote URLs","List remote repositories","git remote -v"
-git remote,add <name> <url>,,,,,-,-,-,"Add remote repository","Add a new remote repository","git remote add origin https://github.com/user/repo.git"
-git remote,remove <name>,,,,,-,-,-,"Remove remote repository","Remove a remote repository","git remote remove origin"
-git tag,-a <name> -m message,,,,,-,-,-,"Create annotated tag","Create a tag with annotation","git tag -a v1.0 -m 'Release version 1.0'"
-git tag,,,,,-,-,-,-,"List tags","Show all tags","git tag"
-git log,,,,,-,-,-,-,"Show commit history","View commit log","git log"
-git log,--oneline,,,,,-,-,-,"Show one line per commit","Compact log view of commits","git log --oneline"
-git reset,--soft <commit>,,,,,-,-,-,"Reset commits but keep changes staged","Soft reset to specific commit","git reset --soft HEAD\~1"
-git reset,--hard <commit>,,,,,-,-,-,"Reset commits and discard changes","Hard reset to specific commit","git reset --hard HEAD\~1"
-git revert,<commit>,,,,,-,-,-,"Create commit that reverts changes of specific commit","Revert the effect of a commit","git revert abc123"
-git clean,-fd,,,,,-,-,-,"Remove untracked files and directories","Clean untracked files and directories","git clean -fd"
-git bisect,start,,,,,-,-,-,"Start bisect to find bug-inducing commit","Begin binary search for erroneous commit","git bisect start"
-git bisect,good <commit>,,,,,-,-,-,"Mark commit as good during bisect","Mark good commit during bisect","git bisect good abc123"
-git bisect,bad <commit>,,,,,-,-,-,"Mark commit as bad during bisect","Mark bad commit during bisect","git bisect bad def456"
-git cherry-pick,<commit>,,,,,-,-,-,"Apply changes from specific commit","Apply specific commit changes","git cherry-pick abc123"
-git fetch,,,,,-,-,-,-,"Download objects and refs from remote","Fetch objects and references from remote","git fetch origin"
-git reflog,,,,,-,-,-,-,"Show history of HEAD changes","Show history of changes to references","git reflog"
+git merge,,,,,-,-,-,-,Merge branch into current branch / Combine changes from branch into current / git merge feature
+git merge,--no-ff,,,,,-,-,-,Create merge commit even if fast-forward possible / Create merge commit even if fast-forward possible / git merge --no-ff feature
+git merge,--abort,,,,,-,-,-,Abort current merge / Cancel running merge process / git merge --abort
+git push,,,,,-,-,-,-,Push commits to remote / Send commits to remote repository / git push origin main
+git push,--force,,,,,-,-,-,Force push commits / Forcefully push commits to remote / git push --force origin main
+git push,--set-upstream,,,,,-,-,-,Set branch upstream when pushing / Set upstream branch tracking / git push --set-upstream origin feature
+git pull,,,,,-,-,-,-,Fetch and merge from remote / Fetch and merge remote changes / git pull origin main
+git pull,--rebase,,,,,-,-,-,Fetch and rebase instead of merge / Rebase local changes on top of incoming / git pull --rebase origin main
+git stash,,,,,-,-,-,-,Save changes temporarily / Temporarily stash changes / git stash
+git stash,apply,,,,,-,-,-,Apply stashed changes / Apply changes saved in stash / git stash apply
+git remote,-v,,,,,-,-,-,Show remote URLs / List remote repositories / git remote -v
+git remote,add <name> <url>,,,,,-,-,-,Add remote repository / Add a new remote repository / git remote add origin https://github.com/user/repo.git
+git remote,remove <name>,,,,,-,-,-,Remove remote repository / Remove a remote repository / git remote remove origin
+git tag,-a <name> -m message,,,,,-,-,-,Create annotated tag / Create a tag with annotation / git tag -a v1.0 -m 'Release version 1.0'
+git tag,,,,,-,-,-,-,List tags / Show all tags / git tag
+git log,,,,,-,-,-,-,Show commit history / View commit log / git log
+git log,--oneline,,,,,-,-,-,Show one line per commit / Compact log view of commits / git log --oneline
+git reset,--soft <commit>,,,,,-,-,-,Reset commits but keep changes staged / Soft reset to specific commit / git reset --soft HEAD\~1
+git reset,--hard <commit>,,,,,-,-,-,Reset commits and discard changes / Hard reset to specific commit / git reset --hard HEAD\~1
+git revert,<commit>,,,,,-,-,-,Create commit that reverts changes of specific commit / Revert the effect of a commit / git revert abc123
+git clean,-fd,,,,,-,-,-,Remove untracked files and directories / Clean untracked files and directories / git clean -fd
+git bisect,start,,,,,-,-,-,Start bisect to find bug-inducing commit / Begin binary search for erroneous commit / git bisect start
+git bisect,good <commit>,,,,,-,-,-,Mark commit as good during bisect / Mark good commit during bisect / git bisect good abc123
+git bisect,bad <commit>,,,,,-,-,-,Mark commit as bad during bisect / Mark bad commit during bisect / git bisect bad def456
+git cherry-pick,<commit>,,,,,-,-,-,Apply changes from specific commit / Apply specific commit changes / git cherry-pick abc123
+git fetch,,,,,-,-,-,-,Download objects and refs from remote / Fetch objects and references from remote / git fetch origin
+git reflog,,,,,-,-,-,-,Show history of HEAD changes / Show history of changes to references / git reflog
