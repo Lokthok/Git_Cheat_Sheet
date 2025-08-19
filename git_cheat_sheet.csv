@@ -24,7 +24,7 @@ git config,--global,credential,helper,"cache","Per-user configuration","Credenti
 git init,,,,,-,-,-,-,Initialize a new Git repository and / or Initialize new Git repository and / or git init myproject
 git clone,,,,<url>,-,-,-,-,Clone a repository from URL / Clone repository from remote URL / git clone https://github.com/user/repo.git
 git clone,--branch <branch>,,<url>,-,-,-,-,"Clone specific branch from repository",Clone specific branch from a remote repo / git clone --branch develop https://github.com/user/repo.git
-git add,,,,.,-,-,-,-,"Add files to staging area","Add all files to index","git add ."
+git add,,,,.,-,-,-,-,Add files to staging area / Add all files to index /git add .
 git status,,,,,-,-,-,-,"Show modified and staged files","Show repository status","git status"
 git commit,-m message,,,,,-,-,-,"Commit staged changes with message","Create commit with message","git commit -m 'Add new feature'"
 git commit,--amend,,,,,-,-,-,"Modify the last commit","Amend previous commit","git commit --amend"
