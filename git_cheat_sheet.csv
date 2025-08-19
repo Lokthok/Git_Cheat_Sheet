@@ -9,7 +9,7 @@ git,commit,save staged changes to the repository with a message
 git,status,show the status of working directory and staging area
 git,log,show commit history of the repository
 git,diff,show changes between commits or commit and working tree  etc.
-git,branch,list, create or delete branches
+git,branch,list or create or delete branches
 git,branch -d,delete a specified branch
 git,checkout,switch branches or restore working tree files
 git,checkout -b,create and switch to a new branch
