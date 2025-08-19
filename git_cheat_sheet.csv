@@ -30,7 +30,7 @@ git commit,-m message,,,,,-,-,-,Commit staged changes with message / Create comm
 git commit,--amend,,,,,-,-,-,Modify the last commit / Amend previous commit / git commit --amend
 git branch,-d,,,,,-,-,-,Delete branch safely / Delete local branch safely / git branch -d feature
 git branch,-D,,,,,-,-,-,Force delete branch / Force delete local branch / git branch -D feature
-git branch,--all,,,,,-,-,-,"List all branches local and remote","List all branches including remote","git branch --all"
+git branch,--all,,,,,-,-,-,List all branches local and remote / List all branches including remote / git branch --all
 git checkout,-b <branch>,,,,,-,-,-,"Create and switch to new branch","Create new branch and switch","git checkout -b feature"
 git checkout,<branch>,,,,,-,-,-,"Switch to existing branch","Switch branches","git checkout main"
 git merge,,,,,-,-,-,-,"Merge branch into current branch","Combine changes from branch into current","git merge feature"
