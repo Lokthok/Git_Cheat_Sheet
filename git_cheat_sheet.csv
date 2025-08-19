@@ -5,7 +5,7 @@ git config,--global,user,name,"Max Mustermann","Per-user configuration","User re
 git config,--global,user,email,"max@example.com","Per-user configuration","User related settings","Email for commits","Set the user email for commits","git config --global user.email ""max@example.com"""
 git config,--local,core,editor,"vim","Repository specific configuration","Core git settings","Default text editor","Set default text editor","git config --local core.editor ""vim"""
 git config,--local,core.autocrlf,true,"Repository specific configuration","Core git settings","Handle line endings","Handle line endings conversion","git config --local core.autocrlf true"
-git config,--worktree,core.autocrlf,true,"Worktree specific configuration","Core git settings","Handle line endings","Handle line endings conversion for worktree","git config --worktree core.autocrlf true"
+git config,--worktree,core,autocrlf,true,,"Worktree specific configuration","Core git settings","Handle line endings","Handle line endings conversion for worktree","git config --worktree core.autocrlf true"
 git config,-c,alias.st,"status","Temporary command-line config","Alias commands","Alias for git status","Temporary alias for git status","git config -c alias.st status"
 git config,--global,core.autocrlf,true,"Per-user configuration","Core git settings","Enable automatic line ending conversion","Enable automatic line ending conversion","git config --global core.autocrlf true"
 git config,--global,pull.rebase,false,"Per-user configuration","Pull commands settings","Use merge or rebase when pulling","Set pull to merge or rebase","git config --global pull.rebase false"
